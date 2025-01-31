@@ -633,6 +633,9 @@
   .row-auto {
     grid-row: auto;
   }
+  .row-span-2 {
+    grid-row: span 2 / span 2;
+  }
   .row-span-full {
     grid-row: 1 / -1;
   }
@@ -842,6 +845,9 @@
   }
   .h-\[85px\] {
     height: 85px;
+  }
+  .h-full {
+    height: 100%;
   }
   .h-screen {
     height: 100vh;
