@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- #ed1c24 -->
+    <!-- HEADER LG/XL -->
+    <header class="fixed z-50 w-full hidden md:hidden lg:block xl:block">
+      <div
+        x-data="{ show: true }"
+        x-show="show"
+        class="bg-black flex justify-between items-center p-3"
+      >
+        <p class="text-white text-xs mx-auto">
+          Sign up and get 20% off to your first order.
+          <span class="underline">Sign Up Now</span>
+        </p>
+        <ion-icon
+          name="close-outline"
+          class="text-white cursor-pointer text-xl"
+          @click="show = false"
+        >
+        </ion-icon>
+      </div>
+      <div class="flex items-center justify-between p-1 bg-white w-full">
+        <div class="mx-5 flex items-center">
+          <img src="/src/assets/logo.svg" alt="" class="w-16" />
+          <h1 class="text-xl font-bold">Howard</h1>
+        </div>
+        <nav>
+          <ul class="flex items-center gap-5 text-sm font-medium mx-8">
+            <li class="hover:underline"><a href="#hero">Home</a></li>
+            <li class="hover:underline"><a href="#bestSeller">Shop</a></li>
+            <li class="hover:underline"><a href="#review">Reviews</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HEADER MD/SM -->
+    <header
+      class="w-full z-50 fixed block md:block lg:hidden xl:hidden bg-white"
+      x-data="{ showMenu: false, showAdvertisement: true }"
+    >
+      <div
+        x-show="showAdvertisement"
+        class="bg-black w-full p-3 flex items-center justify-between"
+      >
+        <p class="text-white text-xs mx-auto">
+          Sign up and get 20% off to your first order.
+          <span class="underline cursor-pointer">Sign Up Now</span>
+        </p>
+        <ion-icon
+          name="close-outline"
+          class="text-white cursor-pointer text-xl"
+          @click="showAdvertisement = false"
+          x-transition
+        ></ion-icon>
+      </div>
+
+      <div class="flex items-center justify-between mx-5">
+        <div class="flex items-center">
+          <button @click="showMenu = !showMenu">
+            <ion-icon
+              name="menu-outline"
+              class="text-black cursor-pointer text-3xl"
+            ></ion-icon>
+          </button>
+          <img src="/src/assets/logo.svg" alt="" class="w-16" />
+          <h1 class="font-bold text-lg">Howard</h1>
+        </div>
+      </div>
+      <div
+        x-show="showMenu"
+        class="fixed inset-0 w-[60%] bg-white z-50"
+        @click.away="showMenu = false"
+        x-transition:enter="transition-transform ease-out duration-300"
+        x-transition:enter-start="-translate-x-full"
+        x-transition:enter-end="translate-x-0"
+        x-transition:leave="transition-transform ease-in duration-300"
+        x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="-translate-x-full"
+      >
+        <div class="px-5 mt-8">
+          <button @click="showMenu = false" class="cursor-pointer">
+            <ion-icon name="close-outline" class="text-3xl"></ion-icon>
+          </button>
+        </div>
+        <div>
+          <nav>
+            <ul
+              class="flex flex-col items-start gap-5 mx-10 text-sm font-medium py-5"
+            >
+              <li class="hover:underline"><a href="#hero">Home</a></li>
+              <li class="hover:underline"><a href="#bestSeller">Shop</a></li>
+              <li class="hover:underline"><a href="#review">Reviews</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="pt-24">
+      <div class="flex-col lg:flex-row flex items-center justify-center">
+        <div class="w-1/2">
+          <div class="flex items-center gap-1 xl:gap-2">
+            <div class="text-2xl xl:text-3xl font-bold text-[#ed1c24]">
+              500+
+            </div>
+            <div class="text-gray-400 text-sm mt-2 xl:text-base">
+              Customer Happy
+            </div>
+          </div>
+          <h1
+            class="font-semibold text-3xl md:text-[40px] lg:text-[45px] lg:max-w-[35rem] xl:text-6xl leading-tight"
+          >
+            Transform Your Ideas into Stunning Designs
+          </h1>
+          <p
+            class="text-regular text-gray-400 mt-2 text-[13px] md:text-[15px] md:max-w-[35rem] lg:max-w-[29rem] xl:max-w-[45rem] xl:text-base *:leading-relaxed font-poppins"
+          >
+            We provide creative and professional graphic design, web design, and
+            branding services to take your business to the next level.
+          </p>
+          <div class="flex items-center gap-5 mt-7">
+            <div class="gap-3 items-center">
+              <a
+                href="login.html"
+                class="w-full p-4 bg-[#ed1c24] text-white rounded-tr-lg rounded-bl-lg text-base font-medium flex items-center gap-3"
+              >
+                View Our Portofolio
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="">
+          <dotlottie-player
+            src="https://lottie.host/337b2e14-62e8-45f2-b4ad-8a9861eee805/e3cCqc8mkU.lottie"
+            background="transparent"
+            speed="1"
+            style="width: 400px; height: 400px"
+            loop
+            autoplay
+          ></dotlottie-player>
+        </div>
+      </div>
+    </div>
+    <section class="mt-10 mx-12">
+      <h2 class="text-2xl font-semibold mb-4">Our Services</h2>
+      
+    </section>
+
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
