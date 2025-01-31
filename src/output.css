@@ -846,6 +846,9 @@
   .h-1 {
     height: calc(var(--spacing) * 1);
   }
+  .h-96 {
+    height: calc(var(--spacing) * 96);
+  }
   .h-\[85px\] {
     height: 85px;
   }
