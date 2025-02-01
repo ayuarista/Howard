@@ -11,7 +11,7 @@ html{
     width: 200px;
     height: 200px;
     background: rgba(217, 3, 3, 0.3);
-    filter: blur(40px);
+    filter: blur(50px);
     border-radius: 50%;
     z-index: -1;
   }
