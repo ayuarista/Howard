@@ -91,3 +91,81 @@ function ourPortofolio(){
         ]
     }
 }
+
+function Testimonial(){
+  return{
+    items:[
+      {
+        id: 1,
+        name: "Eric Doe",
+        title: "CEO",
+        desc: "Absolutely amazing experience! The design quality exceeded my expectations, and I highly recommend their service.",
+        rating: 4.8,
+        img: "https://i.pinimg.com/736x/6f/fa/90/6ffa90ed0c9303d87baa696d795476c6.jpg"
+      },
+      {
+        id: 2,
+        name: "Sam Smith",
+        title: "Designer",
+        desc: "I've been using their service for years now and absolutely loved it! Their team is friendly and responsive, and I'm always satisfied with their work.",
+        rating: 4.9,
+        img: "https://i.pinimg.com/736x/da/48/a0/da48a0fed5f028333aaedffba0ad9f22.jpg"
+      },
+      {
+        id: 3,
+        name: "John Doe",
+        title: "Product Manager",
+        desc: "I couldn't have asked for a better service! They've provided me with a fantastic product and a great team to work with.",
+        rating: 4.7,
+        img: "https://i.pinimg.com/736x/7b/ca/ca/7bcacafd7f4d9cf0de0bcb0d5a537767.jpg"
+      },
+      {
+        id: 4,
+        name: "Alice Yeu",
+        title: "Frontend Developer",
+        desc: "I've been using their service for a few months now and I'm absolutely satisfied! Their team is friendly and responsive, and I'm always satisfied with their work.",
+        rating: 4.9,
+        img: "https://i.pinimg.com/736x/41/ae/2d/41ae2d1f7f5b033ac9ca086bf2f8633f.jpg"
+      },
+      {
+        id: 5,
+        name: "Bob Brown",
+        title: "Senior Designer",
+        desc: "Professional, creative, and responsive! I'm extremely happy with the results and the overall experience. I highly recommend this company to anyone.",
+        rating: 4.8,
+        img: "https://i.pinimg.com/736x/3c/da/e6/3cdae662cbd76f7cea7306be8dccf328.jpg"
+      },
+      {
+        id: 6,
+        name: "Charlie Clarkson",
+        title: "Senior Product Manager",
+        desc: "Great attention to detail and excellent communication throughout the project. Will definitely work with them again!",
+        rating: 4.7,
+        img: "https://i.pinimg.com/736x/db/39/fe/db39fec1632907820488c8b4b9962d2d.jpg"
+      }
+    ]
+  }
+}
+
+function loopIcon(){
+  return{
+    items:[
+      {
+        id: 1,
+        name:"logo-twitter"
+      },
+      {
+        id: 2,
+        name: "logo-facebook"
+      },
+      {
+        id: 3,
+        name: "logo-instagram"
+      },
+      {
+        id: 4,
+        name: "logo-linkedin"
+      }
+    ]
+  }
+}
