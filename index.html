@@ -221,7 +221,83 @@
           </div>
       </div>
   </section>
-      
+    <!-- Our Portofolio -->
+    <section class="lg:mx-12 mx-8 mt-12">
+      <h2 class="text-3xl font-semibold text-center mb-8">
+        Our <span class="border-b-4 border-[#ed1c24] px-2">Portfolio</span>
+        <p class="text-sm text-gray-400 font-normal mt-5 px-72">
+          <ion-icon name="alert-circle-outline" class="text-red-500 text-[15px]"></ion-icon> The images displayed in this portfolio gallery are not from a website I created. They were sourced externally and used solely for design and layout demonstration purposes.</p>
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" x-data="ourPortofolio()">
+        <template x-for="item in items" :key="item.id">
+          <div class="relative group overflow-hidden rounded-lg">
+            <img :src="item.img" alt="Portfolio Image" class="w-full object-cover transition-transform duration-300 group-hover:scale-110">
+            <div class="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+              <h1 class="text-lg font-semibold" x-text="item.title"></h1>
+              <p class="text-sm" x-text="item.desc"></p>
+            </div>
+            <div class="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <a :href="item.link" class="text-white bg-gray-800 px-4 py-1 rounded-full hover:bg-[#ed1c24] transition">
+                <i class="fa-solid fa-arrow-up-right-from-square fa-sm" style="color: #ffffff;"></i>
+              </a>
+            </div>
+          </div>
+        </template>
+      </div>
+  </section>
+  <section class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Customer Reviews</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Review Card 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+            <div class="flex items-center space-x-4 mb-4">
+                <img src="https://i.pravatar.cc/80?img=1" alt="Profile" class="w-12 h-12 rounded-full">
+                <div>
+                    <h3 class="font-semibold text-gray-800">John Doe</h3>
+                    <p class="text-sm text-gray-500">Graphic Designer</p>
+                </div>
+            </div>
+            <!-- Star Rating -->
+            <div class="flex space-x-1 text-yellow-400 mb-3">
+                ★ ★ ★ ★ ★
+            </div>
+            <p class="text-gray-600">"Absolutely amazing experience! The design quality exceeded my expectations, and I highly recommend their service."</p>
+        </div>
+
+        <!-- Review Card 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+            <div class="flex items-center space-x-4 mb-4">
+                <img src="https://i.pravatar.cc/80?img=2" alt="Profile" class="w-12 h-12 rounded-full">
+                <div>
+                    <h3 class="font-semibold text-gray-800">Sarah Johnson</h3>
+                    <p class="text-sm text-gray-500">UI/UX Designer</p>
+                </div>
+            </div>
+            <div class="flex space-x-1 text-yellow-400 mb-3">
+                ★ ★ ★ ★ ☆
+            </div>
+            <p class="text-gray-600">"Great attention to detail and excellent communication throughout the project. Will definitely work with them again!"</p>
+        </div>
+
+        <!-- Review Card 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+            <div class="flex items-center space-x-4 mb-4">
+                <img src="https://i.pravatar.cc/80?img=3" alt="Profile" class="w-12 h-12 rounded-full">
+                <div>
+                    <h3 class="font-semibold text-gray-800">Michael Brown</h3>
+                    <p class="text-sm text-gray-500">Entrepreneur</p>
+                </div>
+            </div>
+            <div class="flex space-x-1 text-yellow-400 mb-3">
+                ★ ★ ★ ★ ★
+            </div>
+            <p class="text-gray-600">"Professional, creative, and responsive! I'm extremely happy with the results and the overall experience."</p>
+        </div>
+    </div>
+</section>
+    
 
 
 
