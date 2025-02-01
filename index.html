@@ -355,52 +355,79 @@
         </template>
       </div>
     </section>
-    <footer class="bg-white text-black">
-      <div class="flex justify-between">
-        <div class="flex flex-col">
-          <div class="flex items-center gap-1">
-            <img src="/src/assets/logo.svg" alt="" class="w-10" />
+    <footer class="bg-white text-black py-10 px-6">
+      <div class="container mx-auto grid md:grid-cols-4 gap-8">
+        <!-- Brand & Socials -->
+        <div>
+          <div class="flex items-center gap-2">
+            <img src="/src/assets/logo.svg" alt="Logo" class="w-10" />
             <h1 class="font-semibold text-xl">Howard</h1>
           </div>
-          <div class="flex flex-row gap-2" x-data="loopIcon()">
-            <template x-for="item in items" :key="item.id">
-              <a href="">
-                <div
-                  class="p-2 rounded-full border border-gray-400 flex items-center hover:bg-[#ed1c24] hover:text-white transition-transform duration-500 ease-in-out"
-                >
-                  <ion-icon :name="item.name"></ion-icon>
-                </div>
-              </a>
-            </template>
+          <p class="text-gray-600 mt-2">
+            With a team of seasoned designers, Howard delivers top-notch design solutions that align with your brand’s identity and goals.
+          </p>
+          <div class="flex gap-2 mt-4">
+            <a href="#" class="p-2 rounded-full border border-gray-400 hover:bg-[#ed1c24] hover:text-white transition">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+            <a href="#" class="p-2 rounded-full border border-gray-400 hover:bg-[#ed1c24] hover:text-white transition">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="#" class="p-2 rounded-full border border-gray-400 hover:bg-[#ed1c24] hover:text-white transition">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
           </div>
         </div>
+    
+        <!-- Navigation -->
         <div>
-          <ul class="flex items-center gap-3 text-white">
+          <h2 class="font-semibold text-lg mb-3">Quick Links</h2>
+          <ul class="text-gray-600 space-y-2">
             <li><a href="#about" class="hover:text-[#ed1c24]">About</a></li>
             <li><a href="#service" class="hover:text-[#ed1c24]">Service</a></li>
-            <li>
-              <a href="#portofolio" class="hover:text-[#ed1c24]">Portofolio</a>
-            </li>
-            <li>
-              <a href="#testimonial" class="hover:text-[#ed1c24]"
-                >Testimonial</a
-              >
-            </li>
+            <li><a href="#portfolio" class="hover:text-[#ed1c24]">Portfolio</a></li>
+            <li><a href="#testimonial" class="hover:text-[#ed1c24]">Testimonial</a></li>
           </ul>
         </div>
+    
+        <!-- Contact Us -->
         <div>
-          <p>
-            With a team of seasoned designers, Howard delivers top-notch design
-            solutions that align with your brand’s identity and goals.
-          </p>
-        </div>
-        <div>
-          <h1>Contact us</h1>
-          <input type="text" placeholder="enter your email">
-          <ion-icon name="send-outline"></ion-icon>
+          <h2 class="font-semibold text-lg mb-3">Contact Us</h2>
+          <form class="flex items-center bg-gray-100 p-2 rounded-lg">
+            <input type="email" placeholder="Enter your email" class="bg-transparent outline-none flex-1 text-gray-600 px-2">
+            <button class="text-white bg-[#ed1c24] p-2 rounded-md">
+              <ion-icon name="send-outline"></ion-icon>
+            </button>
+          </form>
+          <div class="mt-4 space-y-2 text-gray-600">
+            <p class="flex items-center gap-2">
+              <ion-icon name="call-outline"></ion-icon> +62 812 3456 7890
+            </p>
+            <p class="flex items-center gap-2">
+              <ion-icon name="location-outline"></ion-icon> Jakarta, Indonesia
+            </p>
+          </div>
+          <!-- Maps -->
+          <div class="mt-4">
+            <iframe
+              class="w-full h-32 rounded-lg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.379076064287!2d110.41259631526078!3d-7.200237773348824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b6e5b6e6e6f%3A0x36e8b6e5b6e6e6e6!2sJakarta%2C%20Indonesia!5e0!3m2!1sen!2sid!4v1644400089999"
+              allowfullscreen=""
+              loading="lazy">
+            </iframe>
+          </div>
         </div>
       </div>
+    
+      <!-- Divider Line -->
+      <hr class="border-t border-gray-300 my-6">
+    
+      <!-- Copyright -->
+      <div class="text-center text-gray-600">
+        &copy; 2024 Howard. All rights reserved.
+      </div>
     </footer>
+    
     <script src="/src/script.js"></script>
     <script
       src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
