@@ -9,6 +9,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
     <!-- HEADER MD/SM -->
@@ -145,10 +146,10 @@
             <div class="flex items-center gap-5 mt-7">
               <a
                 href="#portofolio"
-                class="p-3 bg-[#ed1c24] text-white rounded-tr-lg rounded-bl-lg text-base font-medium flex items-center gap-3 transition-all hover:bg-[#d4171d]"
+                class="p-3 bg-[#ed1c24] text-white rounded-tr-lg rounded-bl-lg text-[15px] font-medium flex items-center gap-3 transition-all hover:bg-[#d4171d]"
               >
                 View Our Portofolio
-                <ion-icon name="arrow-forward-outline"></ion-icon>
+                <ion-icon name="arrow-forward-outline" class="text-lg"></ion-icon>
               </a>
             </div>
           </div>
@@ -169,7 +170,7 @@
       </div>
     </div>
     <!-- Why Us -->
-    <section class="lg:mx-12 mx-8 mt-16" id="about">
+    <section class="lg:mx-12 mx-8 mt-12 scroll-mt-36" id="about">
       <div class="grid lg:grid-cols-4 gap-8">
         <div class="flex flex-col justify-center col-span-2">
           <div>
@@ -217,7 +218,7 @@
       </div>
     </section>
     <!-- Service -->
-    <section class="mt-10 mx-12" id="service">
+    <section class="mt-16 mx-12 scroll-mt-36" id="service">
       <h2 class="text-3xl font-semibold border-l-4 border-[#ed1c24] px-2">
         Our Services
       </h2>
@@ -254,7 +255,7 @@
       </div>
     </section>
     <!-- Our Portofolio -->
-    <section class="lg:mx-12 mx-8 mt-16" id="portofolio">
+    <section class="lg:mx-12 mx-8 mt-16 scroll-mt-36" id="portofolio">
       <h2 class="text-3xl font-semibold text-center mb-8">
         Our <span class="border-b-4 border-[#ed1c24] px-2">Portfolio</span>
         <p class="text-sm text-gray-400 font-normal mt-5 lg:px-72">
@@ -305,7 +306,7 @@
       </div>
     </section>
     <!-- Testimonial -->
-    <section class="lg:mx-12 mx-8 mt-16" id="testimonial">
+    <section class="lg:mx-12 mx-8 mt-16 scroll-mt-36" id="testimonial">
       <h2 class="text-3xl font-semibold border-l-4 border-[#ed1c24] px-2">
         Our Customer Review's
       </h2>
@@ -360,8 +361,8 @@
       <div class="container mx-auto flex lg:flex-row flex-col justify-between gap-8">
         <div class="flex flex-col justify-between">
           <div>
-            <div class="flex items-center gap-2">
-              <img src="/src/assets/logo.svg" alt="Logo" class="w-10" />
+            <div class="flex items-center">
+              <img src="/src/assets/logo.svg" alt="Logo" class="w-12" />
               <h1 class="font-semibold text-xl">Howard</h1>
             </div>
             <p class="text-gray-600 mt-2 max-w-80 text-justify">
