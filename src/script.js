@@ -169,3 +169,29 @@ function loopIcon(){
     ]
   }
 }
+
+function emailForm() {
+  return {
+      email: '',
+      sendEmail() {
+          if (!this.email.trim()) {
+              Swal.fire({
+                  icon: 'error',
+                  title: 'Oops...',
+                  text: 'Email tidak boleh kosong!',
+              });
+              return;
+          }
+
+          Swal.fire({
+              icon: 'success',
+              title: 'Berhasil!',
+              text: 'Email berhasil dikirim!',
+          });
+
+          setTimeout(() => {
+              window.location.href = `mailto:aristaadewi@gmail.com?subject=New Contact&body=Email: ${this.email}`;
+          }, 1500);
+      }
+  }
+}

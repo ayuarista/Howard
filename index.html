@@ -392,12 +392,13 @@
         </div>
         <div>
           <h2 class="font-semibold text-lg mb-3">Contact Us</h2>
-          <div class="flex items-center bg-gray-100 p-2 rounded-md">
-            <input type="email" placeholder="Enter your email" class="bg-transparent outline-none flex-1 text-gray-600 px-2 text-sm">
-            <button class="text-white bg-[#ed1c24] p-2 rounded-md flex items-center">
-              <ion-icon name="send-outline"></ion-icon>
+          <div x-data="emailForm()" class="flex items-center border border-gray-300 p-2 rounded-md">
+            <input type="email" x-model="email" placeholder="Enter your email"
+                class="bg-transparent outline-none flex-1 text-gray-600 px-2 text-sm">
+            <button @click="sendEmail" class="text-white bg-[#ed1c24] p-2 rounded-md flex items-center cursor-pointer">
+                <ion-icon name="send-outline"></ion-icon>
             </button>
-          </div>
+        </div>
           <div class="mt-4 space-y-2 text-gray-600">
             <p class="flex items-center gap-2">
               <ion-icon name="call-outline"></ion-icon> +62 812 3456 7890
@@ -423,6 +424,7 @@
     </footer>
     
     <script src="/src/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script
       src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
       type="module"
