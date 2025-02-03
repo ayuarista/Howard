@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Howard</title>
     <link rel="stylesheet" href="./src/output.css" />
-    <link rel="icon" href="./src/assets/logo.svg">
+    <link rel="icon" href="./src/assets/logo.svg" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
@@ -66,7 +66,7 @@
             <ul
               class="flex flex-col items-start gap-5 mx-10 text-base font-medium py-5"
             >
-            <li class="hover:underline"><a href="#about">About</a></li>
+              <li class="hover:underline"><a href="#about">About</a></li>
               <li class="hover:underline"><a href="#service">Service</a></li>
               <li class="hover:underline">
                 <a href="#portofolio">Portofolio</a>
@@ -149,7 +149,10 @@
                 class="p-3 bg-[#ed1c24] text-white rounded-tr-lg rounded-bl-lg text-[15px] font-medium flex items-center gap-3 transition-all hover:bg-[#d4171d]"
               >
                 View Our Portofolio
-                <ion-icon name="arrow-forward-outline" class="text-lg"></ion-icon>
+                <ion-icon
+                  name="arrow-forward-outline"
+                  class="text-lg"
+                ></ion-icon>
               </a>
             </div>
           </div>
@@ -357,16 +360,21 @@
       </div>
     </section>
     <section>
-      <table 
-      x-data="{users[]}"
-      x-init="fetch('https://jsonplaceholder.typicode.com/posts')"
-      >
-
-      </table>
+      <table
+        x-data="{users[]}"
+        x-init="fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response => response.json())
+        .then(data => users = data)"
+        class="w-full border-t border-gray-200 table-fixed"
+        
+      ></table>
     </section>
+
     <!-- Footer -->
     <footer class="bg-white text-black py-8 px-6 mt-20">
-      <div class="container mx-auto flex lg:flex-row flex-col justify-between gap-8">
+      <div
+        class="container mx-auto flex lg:flex-row flex-col justify-between gap-8"
+      >
         <div class="flex flex-col justify-between">
           <div>
             <div class="flex items-center">
@@ -374,7 +382,8 @@
               <h1 class="font-semibold text-xl">Howard</h1>
             </div>
             <p class="text-gray-600 mt-2 max-w-80 text-justify">
-              With a team of seasoned designers, Howard delivers top-notch design solutions that align with your brand’s identity and goals.
+              With a team of seasoned designers, Howard delivers top-notch
+              design solutions that align with your brand’s identity and goals.
             </p>
           </div>
           <div class="flex flex-row gap-2 mt-10" x-data="loopIcon()">
@@ -394,19 +403,35 @@
           <ul class="text-gray-600 space-y-2">
             <li><a href="#about" class="hover:text-[#ed1c24]">About</a></li>
             <li><a href="#service" class="hover:text-[#ed1c24]">Service</a></li>
-            <li><a href="#portfolio" class="hover:text-[#ed1c24]">Portfolio</a></li>
-            <li><a href="#testimonial" class="hover:text-[#ed1c24]">Testimonial</a></li>
+            <li>
+              <a href="#portfolio" class="hover:text-[#ed1c24]">Portfolio</a>
+            </li>
+            <li>
+              <a href="#testimonial" class="hover:text-[#ed1c24]"
+                >Testimonial</a
+              >
+            </li>
           </ul>
         </div>
         <div>
           <h2 class="font-semibold text-lg mb-3">Contact Us</h2>
-          <div x-data="emailForm()" class="flex items-center border border-gray-300 p-2 rounded-md">
-            <input type="email" x-model="email" placeholder="Enter your email"
-                class="bg-transparent outline-none flex-1 text-gray-600 px-2 text-sm">
-            <button @click="sendEmail" class="text-white bg-[#ed1c24] p-2 rounded-md flex items-center cursor-pointer">
-                <ion-icon name="send-outline"></ion-icon>
+          <div
+            x-data="emailForm()"
+            class="flex items-center border border-gray-300 p-2 rounded-md"
+          >
+            <input
+              type="email"
+              x-model="email"
+              placeholder="Enter your email"
+              class="bg-transparent outline-none flex-1 text-gray-600 px-2 text-sm"
+            />
+            <button
+              @click="sendEmail"
+              class="text-white bg-[#ed1c24] p-2 rounded-md flex items-center cursor-pointer"
+            >
+              <ion-icon name="send-outline"></ion-icon>
             </button>
-        </div>
+          </div>
           <div class="mt-4 space-y-2 text-gray-600">
             <p class="flex items-center gap-2">
               <ion-icon name="call-outline"></ion-icon> +62 812 3456 7890
@@ -420,17 +445,18 @@
               class="w-full h-32 rounded-lg"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.379076064287!2d110.41259631526078!3d-7.200237773348824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b6e5b6e6e6f%3A0x36e8b6e5b6e6e6e6!2sJakarta%2C%20Indonesia!5e0!3m2!1sen!2sid!4v1644400089999"
               allowfullscreen=""
-              loading="lazy">
+              loading="lazy"
+            >
             </iframe>
           </div>
         </div>
       </div>
-      <hr class="border-t border-gray-300 my-6">
+      <hr class="border-t border-gray-300 my-6" />
       <div class="text-center text-gray-600">
         &copy; 2025 Howard. All rights reserved.
       </div>
     </footer>
-    
+
     <script src="/src/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script
