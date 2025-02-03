@@ -358,7 +358,9 @@
     </section>
     <section>
       <table 
-      x-data="{users[]}">
+      x-data="{users[]}"
+      x-init="fetch('')"
+      >
 
       </table>
     </section>
