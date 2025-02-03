@@ -375,9 +375,22 @@
           <th class="text-red-500 font-semibold">Phone</th>
           <th class="text-red-500 font-semibold">Location</th>
           <th class="text-red-500 font-semibold">Company Name</th>
-          <th class="text-red-500 font-semibold">Location</th>
+          <th class="text-red-500 font-semibold">Website</th>
         </tr>
       </thead>
+      <tbody>
+        <template x-for="user in users" :key="user.id">
+          <tr>
+            <td x-text="user.id" class="has-text-link-dark"></td>
+            <td x-text="user.username"></td>
+            <td x-text="user.name"></td>
+            <td x-text="user.phone"></td>
+            <td x-text="user.address.city"></td>
+            <td x-text="user.company.name"></td>
+            <td x-text="user.website"></td>
+          </tr>
+        </template>
+       </tbody>
       </table>
     </section>
 
